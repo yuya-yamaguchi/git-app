@@ -32,3 +32,22 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+
+|Column| Type| Options|
+|id| integer| null: false, primary_key: true, autoincrement|
+|email| varchar(255)| null: false, unique_key: true|
+|encrypted_password| varchar(255)| null: false|
+|reset_password_token| varchar(255)| 
+|remember_created_at| datetime| 
+|sign_in_count| integer| null: false, default: 0|
+|current_sign_in_at| datetime| 
+|last_sign_in_at| datetime| 
+|current_sign_in_ip| varchar(255)| 
+|last_sign_in_ip| varchar(255)| 
+|created_at| datetime| 
+|updated_at| datetime| 
+|nickname| varchar(100)| null: false, index1|
+
+| has_many :groups, through: :groups_users| 
+| has_many :comments| 
