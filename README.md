@@ -34,7 +34,8 @@ Things you may want to cover:
 - belongs_to :user
 
 
-|Column| Type| Options|
+|Column|Type|Options|
+|------|----|-------|
 |id| integer| null: false, primary_key: true, autoincrement|
 |email| varchar(255)| null: false, unique_key: true|
 |encrypted_password| varchar(255)| null: false|
