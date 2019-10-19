@@ -30,7 +30,7 @@ Things you may want to cover:
 |nickname|string|null: false, index: true|
 
 ### Association
-- has_many :groups, through: :groups_users
+- has_many :groups, through :groups_users
 - has_many :comments
 
 ### Other
@@ -45,8 +45,8 @@ Things you may want to cover:
 |updated_at|datetime|
 
 ### Association
-- has_many :users, through: :groups_users
-- has_many :comments
+- has_many :users, through :groups_users
+- has_many :comments, dependent :destroy
 
 
 ## groups_users Table
