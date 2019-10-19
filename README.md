@@ -12,27 +12,6 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-## groups_usersテーブルA
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
-
 ## users Table
 |Column|Type|Options|
 |------|----|-------|
@@ -48,11 +27,14 @@ Things you may want to cover:
 |last_sign_in_ip|varchar(255)| 
 |created_at|datetime| 
 |updated_at|datetime| 
-|nickname|varchar(100)|null: false, index1|
+|nickname|string|null: false, index: true|
 
 ### Association
 - has_many :groups, through: :groups_users
 - has_many :comments
+
+### Other
+- use divese gem
 
 ## groups Table
 |Column|Type|Options|
@@ -82,7 +64,7 @@ Things you may want to cover:
 ## comments Table
 |Column|Type|Options|
 |------|----|-------|
-|Id|integer|null: false, primary_key: true, autoincrement|
+|id|integer|null: false, primary_key: true, autoincrement|
 |text|string|null: false|
 |img_url|text|
 |user_id|integer|null: false, foreign_key: true|
@@ -93,3 +75,14 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :group
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
